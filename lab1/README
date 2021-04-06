@@ -1,0 +1,11 @@
+# This is Sanghyun Han's Lab1 Assignment
+
+I exploit buffer overflow by "inserting large input string in stdin".
+
+By using objdump, I found that <read_flag> function is called through <jump_to_here> which is located in 0x08048665.
+
+So, I inserted input string consisting of repeating "\x04\x08\x65\x86" which is large enough to overwrite the return address.
+
+A desired result is located in ./flag and a simple shell script I used to exploit is located in ./exploit.sh
+
+Thank you.
